@@ -1,0 +1,24 @@
+<%- include ('../partials/header') %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center;">Edit <%= campground.name%></h1>
+            <form action="/campgrounds/<%=campground._id%>/?_method=PUT" method="POST" class="form form-container">
+                <div class="form-group">
+                    <input type="text" name="campground[name]" value="<%= campground.name%>" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="campgrond[image]" value="<%= campground.image%>" class="form-control">
+                    <p class="form-p">Paste your image url or upload imgage from your device storage.</p>
+                    <input type="file">
+                </div>
+                <div class="form-group">
+                    <textarea style="resize: none;" class="form-control" id="textArea" cols="5" rows="7" name="campground[description]" onkeypress="textFeild(event)"><%= campground.description%></textarea>
+                </div>
+                <input type="submit" name="submit" id="" value="update" class="btn btn-primary btn-lg btn-block">
+                <a href="/campgrounds" class="btn">Go Back</a>
+            </form>  
+    </div>
+</div>
+
+
+<%- include ('../partials/footer') %>

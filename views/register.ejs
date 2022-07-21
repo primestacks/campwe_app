@@ -1,0 +1,35 @@
+<%- include ('./partials/header') %>
+<div class="container"> 
+    <div class="inner-form-wrapper">
+        <form action="/register" method="POST" class="form">
+            <div><h1>Sign Up</h1></div>
+            <div class="login-form">
+                <div class="form-items">
+                   <label for="username">Username: </label>
+                    <input type="text" name="username" >
+                </div>
+                <div class="form-items">
+                    <label for="username">Email: </label>
+                     <input type="text" name="email">
+                 </div>
+                <div class="form-items">
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" >
+                </div>
+                <div class="form-items">
+                    <label for="ConfirmPass">Confirm Password: </label>
+                    <input type="password" name="ConfirmPass">
+                </div>
+                <div class="form-items">
+                    <button>Register</button>
+                </div>
+                <div class="form-items">
+                    <p> <a href="#">Forgotten password?</a></p>
+                    <p>Already have an account? <a href="/login">Login</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include ('./partials/footer') %>

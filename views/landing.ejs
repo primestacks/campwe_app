@@ -1,0 +1,25 @@
+<%- include ('partials/headerIndex') %>
+
+<div class="container main-container">
+    <!-- LANDING HERO -->
+    <div class="row landing-wrapper">
+        <div class="col-md-6 landing-item">
+            <h1>Find affordable campsites for  <span> Vacation!!</span></h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed qui nobis eius iusto excepturm, ab quisquam.</p>
+            <% if(!currentUser){ %>
+                <a href="/campgrounds" class=" btn btn-dark btn-lg title-btn title-btn btn-campground"> <i class="fa-solid fa-campground"></i> Campgrounds</a> 
+                <a href="/register" type="button" class="btn btn-outline-dark btn-lg title-btn btn-register" > <i class="fa-solid fa-person-hiking"></i> Sign Up</a>         
+            <%} else{%>
+            <a href="/campgrounds" class=" btn btn-dark btn-lg title-btn btn-campground"> <i class="fa-solid fa-campground"></i> Campgrounds</a> 
+           <% } %>
+        </div>
+
+        <div class=" col-md-6 landing-img">
+            <img src="/images/landingsvg.svg" alt="landing image">   
+        </div>
+    </div>
+</div>
+
+<%- include ('partials/landingFooter') %>
+
+

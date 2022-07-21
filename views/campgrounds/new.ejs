@@ -1,0 +1,42 @@
+<%- include ('../partials/header') %>
+<div class="container ">
+    <div class="row">
+        <div class="col-sm-12 col-md-8 col col-centered">
+            <div class="form-container">
+                <h1 style="text-align: center; font-weight: 600; color:rgb(20, 49, 66)">Add New <span id="addHeaderSpan">Camp Site</span></h1>
+
+                <!-- Add multi part data to the form to configure muter enctype="multipart/form-data" -->
+                <form action="/campgrounds" method="POST" autocomplete="off">
+                    <div class="form-group">
+                        <label for="">Choose Category <span class="comp">*</span></label>
+                        <select name="category" id="category" class="form-control">
+                            <option value="">Select Category:</option>
+                            <option value="" id="cat-event-center">Event Center</option>
+                            <option value="" id="cat-camp-site" >Camp Site</option>
+                            <option value="" id="cat-event-cent">Event Center</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Name: <span class="comp">*</span></label>
+                        <input type="text" name="name" placeholder="Name of Camp site or Event center" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">upload Image <span style="color: red">*</span></label>
+                        <input type="text" name="image" placeholder="Image url" class="form-control">
+                        <p class="form-p">Paste your image url or upload image from your device storage.</p>
+    
+                        <!-- <input type="file" class="form-control" name="image" multiple /> -->
+                    </div>
+                    <div class="form-group" style="color:rgb(52, 57, 59)">
+                        <label for="">Description <span style="color: red">*</span></label>
+                        <textarea style="resize: none;" class="form-control" id="" cols="5" rows="7" name="description" placeholder="Description"></textarea>
+                    </div>
+                    <input type="submit" name="submit" id="" class="btn btn-primary btn-lg btn-block">
+                </form>  
+                <a href="/campgrounds" class="btn">Go Back</a> 
+            </div>
+    </div>
+</div>
+
+
+<%- include ('../partials/footer') %>

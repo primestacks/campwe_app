@@ -1,0 +1,96 @@
+<%- include ('../partials/header') %>
+
+    <header class="big-banner">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-md-10 ">
+                        <h1>Welcome to BrandName</h1>
+                        <p class="p">View our super amazing camp grounds hand-picked from all over the world</p>
+                        <p>
+                            <a href="/campgrounds/new" class="btn btn-lg btn-success"> New Campground</a>
+                        </p>   
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container main-container">
+                <div class="row">
+                    <div class="col-lg-2  col-md-12 ">
+                        <h2>Some stuff here</h2>
+
+                    </div> 
+                    <div class="col-lg-10 col-md-12 ">
+                        <!-- Search bar -->
+                        <div class="col-lg-12 col">
+                            <section id="search">
+                            <label for="search-input"><i class="fa fa-search" aria-hidden="true"></i><span class="sr-only">Search icons</span></label>
+                            <input id="search-input" class="form-control input-lg" placeholder="Search Campsites" autocomplete="off" spellcheck="false" autocorrect="off" tabindex="1">
+                            <a id="search-clear" href="#" class="fa fa-times-circle" aria-hidden="true"><span class="sr-only">Clear search</span></a>
+                            </section>
+                        </div>
+
+                        <!-- Campsite showcase -->
+                        <div style="display: flex; flex-wrap: wrap">
+                            <%campgrounds.forEach(function(campground){ %>
+                                <div class="col-md-3 col-sm-6 text-center small-sample" >
+                                    <div class="thumbnail"> 
+                                        <img src="<%= campground.image%>" class="img-thumbnails rounded" alt="<%= campground.name%>">
+                                        <div class="caption">
+                                            <h4><%= campground.name%></h4>
+                                            
+                                            <div class="components text-left">
+                                                <div class="component-flex-item">
+                                                    <div class="rating text-left">
+                                                        Rating: 4.8
+                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <!-- <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <i class="fa fa-star-half-o" aria-hidden="true"></i> -->
+                                                    </div>
+                                                    
+                                                    <div class="like-comment"> 
+                                                        <span class="like"><i class="fa fa-heart-o" aria-hidden="true"></i></span> 
+                                                        <span class="comment"><i class="fa fa-comment" aria-hidden="true"></i></span> 
+                                                    </div>
+                                                </div>
+                                                <div class="owner-info-link">
+                                                    <a href="#">Posted by: <%= campground.author.username%></a>
+                                                </div>
+                                            </div>
+                                            <p> <a href="/campgrounds/<%=campground._id%>" class="btn btn-primary btn-block more-info-button ">More Info <span class="more-info-span">></span></a></p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            <% }); %>
+                        </div>
+                    </div> 
+                </div>
+        </div>
+    </div>
+
+
+   <!-- Pagination -->
+    <section class="page-container">
+        <div class="container">
+            <nav aria-label="..." class="pagination pull-right" >
+                <ul class="pagination">
+                  <li class="page-item disabled">
+                    <a class="page-link">Previous</a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item " aria-current="page">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+<%- include ('../partials/footer') %>
+
+
+
+
+
