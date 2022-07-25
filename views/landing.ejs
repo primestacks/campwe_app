@@ -1,25 +1,490 @@
 <%- include ('partials/headerIndex') %>
 
 <div class="container main-container">
-    <!-- LANDING HERO -->
-    <div class="row landing-wrapper">
-        <div class="col-md-6 landing-item">
-            <h1>Find affordable campsites for  <span> Vacation!!</span></h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed qui nobis eius iusto excepturm, ab quisquam.</p>
-            <% if(!currentUser){ %>
-                <a href="/campgrounds" class=" btn btn-dark btn-lg title-btn title-btn btn-campground"> <i class="fa-solid fa-campground"></i> Campgrounds</a> 
-                <a href="/register" type="button" class="btn btn-outline-dark btn-lg title-btn btn-register" > <i class="fa-solid fa-person-hiking"></i> Sign Up</a>         
-            <%} else{%>
-            <a href="/campgrounds" class=" btn btn-dark btn-lg title-btn btn-campground"> <i class="fa-solid fa-campground"></i> Campgrounds</a> 
-           <% } %>
-        </div>
-
-        <div class=" col-md-6 landing-img">
-            <img src="/images/landingsvg.svg" alt="landing image">   
-        </div>
+  <!-- LANDING HERO -->
+  <div class="row landing-wrapper">
+    <div class="col-md-6 landing-item">
+      <h1>Find affordable campsites for <span> Vacation!!</span></h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed qui nobis
+        eius iusto excepturm, ab quisquam.
+      </p>
+      <% if(!currentUser){ %>
+      <a
+        href="/campgrounds"
+        class="btn btn-dark btn-lg title-btn title-btn btn-campground"
+      >
+        <i class="fa-solid fa-campground"></i> Campgrounds</a
+      >
+      <a
+        href="/login"
+        type="button"
+        class="btn btn-outline-dark btn-lg title-btn btn-register"
+      >
+        <i class="fa-solid fa-person-hiking"></i> Sign In</a
+      >
+      <%} else{%>
+      <a
+        href="/campgrounds"
+        class="btn btn-dark btn-lg title-btn btn-campground"
+      >
+        <i class="fa-solid fa-campground"></i> Campgrounds</a
+      >
+      <% } %>
     </div>
+
+    <div class="col-md-6 landing-img">
+      <img src="/images/landingsvg.svg" alt="landing image" />
+    </div>
+  </div>
 </div>
 
+<!-- Features and Services Sections Starts here-->
+
+<section class="service-section py-5">
+  <div class="container">
+    <div class="row justify-content-center py-3">
+      <div class="col-md-8 col-12 text-center">
+        <p class="service-main-heading">Features</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-3 col-12">
+        <div class="icon-box">
+          <i class="fa fa-briefcase service-icon"></i>
+          <p class="service-title">Lorem Ipsum</p>
+          <p class="service-para">
+            Voluptatum deleniti atque corrupti quos dolores et quas molestias
+            excepturi sint occaecati cupiditate non provident
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 col-12 mt-4 mt-md-0">
+        <div class="icon-box">
+          <i class="fa fa-clipboard service-icon"></i>
+          <p class="service-title">Dolor Sitema</p>
+          <p class="service-para">
+            Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat tarad limino ata
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 col-12 mt-4 mt-md-0">
+        <div class="icon-box">
+          <i class="fa fa-chart-bar service-icon"></i>
+          <p class="service-title">Sed ut perspiciatis</p>
+          <p class="service-para">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 col-12 mt-4 mt-md-0">
+        <div class="icon-box">
+          <i class="fa fa-binoculars service-icon"></i>
+          <p class="service-title">Nemo Enim</p>
+          <p class="service-para">
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features and Services Sections ends here-->
+
+<!-- Pricing Section  Starts here-->
+
+<div class="container">
+  <article class="section">
+    <header class="section__header">
+      <h2 class="section__title">Simple, transparent pricing</h2>
+      <p class="section__subtitle">No contracts, no surprise fees.</p>
+    </header>
+
+    <!-- Pricing Cards -->
+    <section class="row pricing-row row--wrap">
+      <!-- Card #1: Free -->
+      <section class="pricing-card pricing-card--outline">
+        <div class="pricing-card__summary">
+          <div class="pricing-card__head">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M28.75 35H11.25C9.59301 34.998 8.00445 34.3389 6.83277 33.1672C5.6611 31.9956 5.00198 30.407 5 28.75L5 11.25C5.00198 9.59301 5.6611 8.00445 6.83277 6.83277C8.00445 5.6611 9.59301 5.00198 11.25 5L28.75 5C30.407 5.00198 31.9956 5.6611 33.1672 6.83277C34.3389 8.00445 34.998 9.59301 35 11.25V28.75C34.998 30.407 34.3389 31.9956 33.1672 33.1672C31.9956 34.3389 30.407 34.998 28.75 35ZM11.25 7.5C10.2554 7.5 9.30161 7.89509 8.59835 8.59835C7.89509 9.30161 7.5 10.2554 7.5 11.25V28.75C7.5 29.7446 7.89509 30.6984 8.59835 31.4017C9.30161 32.1049 10.2554 32.5 11.25 32.5H28.75C29.7446 32.5 30.6984 32.1049 31.4017 31.4017C32.1049 30.6984 32.5 29.7446 32.5 28.75V11.25C32.5 10.2554 32.1049 9.30161 31.4017 8.59835C30.6984 7.89509 29.7446 7.5 28.75 7.5H11.25ZM18.75 20C18.75 20.2472 18.8233 20.4889 18.9607 20.6945C19.098 20.9 19.2932 21.0602 19.5216 21.1549C19.7501 21.2495 20.0014 21.2742 20.2439 21.226C20.4863 21.1777 20.7091 21.0587 20.8839 20.8839C21.0587 20.7091 21.1777 20.4863 21.226 20.2439C21.2742 20.0014 21.2495 19.7501 21.1549 19.5216C21.0602 19.2932 20.9 19.098 20.6945 18.9607C20.4889 18.8233 20.2472 18.75 20 18.75C19.6685 18.75 19.3505 18.8817 19.1161 19.1161C18.8817 19.3505 18.75 19.6685 18.75 20ZM12.5 13.75C12.5 13.9972 12.5733 14.2389 12.7107 14.4445C12.848 14.65 13.0432 14.8102 13.2716 14.9049C13.5001 14.9995 13.7514 15.0242 13.9939 14.976C14.2363 14.9278 14.4591 14.8087 14.6339 14.6339C14.8087 14.4591 14.9278 14.2363 14.976 13.9939C15.0242 13.7514 14.9995 13.5001 14.9049 13.2716C14.8102 13.0432 14.65 12.848 14.4445 12.7107C14.2389 12.5733 13.9972 12.5 13.75 12.5C13.4185 12.5 13.1005 12.6317 12.8661 12.8661C12.6317 13.1005 12.5 13.4185 12.5 13.75ZM25 13.75C25 13.9972 25.0733 14.2389 25.2107 14.4445C25.348 14.65 25.5432 14.8102 25.7716 14.9049C26.0001 14.9995 26.2514 15.0242 26.4939 14.976C26.7363 14.9278 26.9591 14.8087 27.1339 14.6339C27.3087 14.4591 27.4277 14.2363 27.476 13.9939C27.5242 13.7514 27.4995 13.5001 27.4049 13.2716C27.3102 13.0432 27.15 12.848 26.9445 12.7107C26.7389 12.5733 26.4972 12.5 26.25 12.5C25.9185 12.5 25.6005 12.6317 25.3661 12.8661C25.1317 13.1005 25 13.4185 25 13.75ZM12.5 26.25C12.5 26.4972 12.5733 26.7389 12.7107 26.9445C12.848 27.15 13.0432 27.3102 13.2716 27.4049C13.5001 27.4995 13.7514 27.5242 13.9939 27.476C14.2363 27.4277 14.4591 27.3087 14.6339 27.1339C14.8087 26.9591 14.9278 26.7363 14.976 26.4939C15.0242 26.2514 14.9995 26.0001 14.9049 25.7716C14.8102 25.5432 14.65 25.348 14.4445 25.2107C14.2389 25.0733 13.9972 25 13.75 25C13.4185 25 13.1005 25.1317 12.8661 25.3661C12.6317 25.6005 12.5 25.9185 12.5 26.25ZM25 26.25C25 26.4972 25.0733 26.7389 25.2107 26.9445C25.348 27.15 25.5432 27.3102 25.7716 27.4049C26.0001 27.4995 26.2514 27.5242 26.4939 27.476C26.7363 27.4277 26.9591 27.3087 27.1339 27.1339C27.3087 26.9591 27.4277 26.7363 27.476 26.4939C27.5242 26.2514 27.4995 26.0001 27.4049 25.7716C27.3102 25.5432 27.15 25.348 26.9445 25.2107C26.7389 25.0733 26.4972 25 26.25 25C25.9185 25 25.6005 25.1317 25.3661 25.3661C25.1317 25.6005 25 25.9185 25 26.25Z"
+              />
+            </svg>
+
+            <h3 class="pricing-card__tier">Free</h3>
+          </div>
+
+          <p class="pricing-card__description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          </p>
+        </div>
+
+        <p class="pricing-card__pricing-line">
+          <span class="pricing-card__price">$0</span>
+          <span>/ month</span>
+        </p>
+
+        <ul class="pricing-card__features">
+          <li class="pricing-card__feature">
+            <svg
+              class="pricing-card__bullet"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M9.00001 16.17L5.53001 12.7C5.14002 12.31 4.51001 12.31 4.12001 12.7C3.73001 13.09 3.73001 13.72 4.12001 14.11L8.30001 18.29C8.69001 18.68 9.32001 18.68 9.71001 18.29L20.29 7.71C20.68 7.32 20.68 6.69 20.29 6.3C19.9 5.91 19.27 5.91 18.88 6.3L9.00001 16.17Z"
+              />
+            </svg>
+            <span>2 links</span>
+          </li>
+          <li class="pricing-card__feature">
+            <svg
+              class="pricing-card__bullet"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M9.00001 16.17L5.53001 12.7C5.14002 12.31 4.51001 12.31 4.12001 12.7C3.73001 13.09 3.73001 13.72 4.12001 14.11L8.30001 18.29C8.69001 18.68 9.32001 18.68 9.71001 18.29L20.29 7.71C20.68 7.32 20.68 6.69 20.29 6.3C19.9 5.91 19.27 5.91 18.88 6.3L9.00001 16.17Z"
+              />
+            </svg>
+            <span>Own analytics platform</span>
+          </li>
+          <li
+            class="pricing-card__feature pricing-card__feature--disabled"
+            aria-hidden="true"
+          >
+            <svg
+              class="pricing-card__bullet"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3 5.71C17.91 5.32 17.28 5.32 16.89 5.71L12 10.59L7.10997 5.7C6.71997 5.31 6.08997 5.31 5.69997 5.7C5.30997 6.09 5.30997 6.72 5.69997 7.11L10.59 12L5.69997 16.89C5.30997 17.28 5.30997 17.91 5.69997 18.3C6.08997 18.69 6.71997 18.69 7.10997 18.3L12 13.41L16.89 18.3C17.28 18.69 17.91 18.69 18.3 18.3C18.69 17.91 18.69 17.28 18.3 16.89L13.41 12L18.3 7.11C18.68 6.73 18.68 6.09 18.3 5.71Z"
+              />
+            </svg>
+            <span>Chat support</span>
+          </li>
+          <li
+            class="pricing-card__feature pricing-card__feature--disabled"
+            aria-hidden="true"
+          >
+            <svg
+              class="pricing-card__bullet"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3 5.71C17.91 5.32 17.28 5.32 16.89 5.71L12 10.59L7.10997 5.7C6.71997 5.31 6.08997 5.31 5.69997 5.7C5.30997 6.09 5.30997 6.72 5.69997 7.11L10.59 12L5.69997 16.89C5.30997 17.28 5.30997 17.91 5.69997 18.3C6.08997 18.69 6.71997 18.69 7.10997 18.3L12 13.41L16.89 18.3C17.28 18.69 17.91 18.69 18.3 18.3C18.69 17.91 18.69 17.28 18.3 16.89L13.41 12L18.3 7.11C18.68 6.73 18.68 6.09 18.3 5.71Z"
+              />
+            </svg>
+            <span>Mobile application</span>
+          </li>
+          <li
+            class="pricing-card__feature pricing-card__feature--disabled"
+            aria-hidden="true"
+          >
+            <svg
+              class="pricing-card__bullet"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3 5.71C17.91 5.32 17.28 5.32 16.89 5.71L12 10.59L7.10997 5.7C6.71997 5.31 6.08997 5.31 5.69997 5.7C5.30997 6.09 5.30997 6.72 5.69997 7.11L10.59 12L5.69997 16.89C5.30997 17.28 5.30997 17.91 5.69997 18.3C6.08997 18.69 6.71997 18.69 7.10997 18.3L12 13.41L16.89 18.3C17.28 18.69 17.91 18.69 18.3 18.3C18.69 17.91 18.69 17.28 18.3 16.89L13.41 12L18.3 7.11C18.68 6.73 18.68 6.09 18.3 5.71Z"
+              />
+            </svg>
+            <span>Unlimited users</span>
+          </li>
+        </ul>
+
+        <button class="button pricing-card__action">Get Started</button>
+      </section>
+
+      <!-- Card #2: Pro -->
+      <section class="pricing-card pricing-card--shadow pricing-card--best">
+        <div class="pricing-card__summary">
+          <div class="pricing-card__head">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.5 5H10.625C11.288 5 11.9239 5.26339 12.3928 5.73223C12.8616 6.20107 13.125 6.83696 13.125 7.5V10.625C13.125 11.288 12.8616 11.9239 12.3928 12.3928C11.9239 12.8616 11.288 13.125 10.625 13.125H7.5C6.83696 13.125 6.20107 12.8616 5.73223 12.3928C5.26339 11.9239 5 11.288 5 10.625V7.5C5 6.83696 5.26339 6.20107 5.73223 5.73223C6.20107 5.26339 6.83696 5 7.5 5ZM7.5 10.625H10.625V7.5H7.5V10.625Z"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.5 15.9371H10.625C11.288 15.9371 11.9239 16.2005 12.3928 16.6694C12.8616 17.1382 13.125 17.7741 13.125 18.4371V21.5621C13.125 22.2251 12.8616 22.861 12.3928 23.3299C11.9239 23.7987 11.288 24.0621 10.625 24.0621H7.5C6.83696 24.0621 6.20107 23.7987 5.73223 23.3299C5.26339 22.861 5 22.2251 5 21.5621V18.4371C5 17.7741 5.26339 17.1382 5.73223 16.6694C6.20107 16.2005 6.83696 15.9371 7.5 15.9371ZM7.5 21.5621H10.625V18.4371H7.5V21.5621Z"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.625 26.8754H7.5C6.83696 26.8754 6.20107 27.1388 5.73223 27.6076C5.26339 28.0765 5 28.7123 5 29.3754V32.5004C5 33.1634 5.26339 33.7993 5.73223 34.2681C6.20107 34.737 6.83696 35.0004 7.5 35.0004H10.625C11.288 35.0004 11.9239 34.737 12.3928 34.2681C12.8616 33.7993 13.125 33.1634 13.125 32.5004V29.3754C13.125 28.7123 12.8616 28.0765 12.3928 27.6076C11.9239 27.1388 11.288 26.8754 10.625 26.8754ZM10.625 32.5004H7.5V29.3754H10.625V32.5004Z"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M32.5001 26.8754H29.3751C28.7121 26.8754 28.0762 27.1388 27.6073 27.6076C27.1385 28.0765 26.8751 28.7123 26.8751 29.3754V32.5004C26.8751 33.1634 27.1385 33.7993 27.6073 34.2681C28.0762 34.737 28.7121 35.0004 29.3751 35.0004H32.5001C33.1631 35.0004 33.799 34.737 34.2679 34.2681C34.7367 33.7993 35.0001 33.1634 35.0001 32.5004V29.3754C35.0001 28.7123 34.7367 28.0765 34.2679 27.6076C33.799 27.1388 33.1631 26.8754 32.5001 26.8754ZM32.5001 32.5004H29.3751V29.3754H32.5001V32.5004Z"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M32.5001 15.9371H29.3751C28.7121 15.9371 28.0762 16.2005 27.6073 16.6694C27.1385 17.1382 26.8751 17.7741 26.8751 18.4371V21.5621C26.8751 22.2251 27.1385 22.861 27.6073 23.3299C28.0762 23.7987 28.7121 24.0621 29.3751 24.0621H32.5001C33.1631 24.0621 33.799 23.7987 34.2679 23.3299C34.7367 22.861 35.0001 22.2251 35.0001 21.5621V18.4371C35.0001 17.7741 34.7367 17.1382 34.2679 16.6694C33.799 16.2005 33.1631 15.9371 32.5001 15.9371ZM32.5001 21.5621H29.3751V18.4371H32.5001V21.5621Z"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M21.5624 26.8754H18.4374C17.7744 26.8754 17.1385 27.1388 16.6697 27.6076C16.2008 28.0765 15.9374 28.7123 15.9374 29.3754V32.5004C15.9374 33.1634 16.2008 33.7993 16.6697 34.2681C17.1385 34.737 17.7744 35.0004 18.4374 35.0004H21.5624C22.2255 35.0004 22.8613 34.737 23.3302 34.2681C23.799 33.7993 24.0624 33.1634 24.0624 32.5004V29.3754C24.0624 28.7123 23.799 28.0765 23.3302 27.6076C22.8613 27.1388 22.2255 26.8754 21.5624 26.8754ZM21.5624 32.5004H18.4374V29.3754H21.5624V32.5004Z"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M18.4374 15.9371H21.5624C22.2255 15.9371 22.8613 16.2005 23.3302 16.6694C23.799 17.1382 24.0624 17.7741 24.0624 18.4371V21.5621C24.0624 22.2251 23.799 22.861 23.3302 23.3299C22.8613 23.7987 22.2255 24.0621 21.5624 24.0621H18.4374C17.7744 24.0621 17.1385 23.7987 16.6697 23.3299C16.2008 22.861 15.9374 22.2251 15.9374 21.5621V18.4371C15.9374 17.7741 16.2008 17.1382 16.6697 16.6694C17.1385 16.2005 17.7744 15.9371 18.4374 15.9371ZM18.4374 21.5621H21.5624V18.4371H18.4374V21.5621Z"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M21.5624 5H18.4374C17.7744 5 17.1385 5.26339 16.6697 5.73223C16.2008 6.20107 15.9374 6.83696 15.9374 7.5V10.625C15.9374 11.288 16.2008 11.9239 16.6697 12.3928C17.1385 12.8616 17.7744 13.125 18.4374 13.125H21.5624C22.2255 13.125 22.8613 12.8616 23.3302 12.3928C23.799 11.9239 24.0624 11.288 24.0624 10.625V7.5C24.0624 6.83696 23.799 6.20107 23.3302 5.73223C22.8613 5.26339 22.2255 5 21.5624 5ZM21.5624 10.625H18.4374V7.5H21.5624V10.625Z"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M29.3751 5H32.5001C33.1631 5 33.799 5.26339 34.2679 5.73223C34.7367 6.20107 35.0001 6.83696 35.0001 7.5V10.625C35.0001 11.288 34.7367 11.9239 34.2679 12.3928C33.799 12.8616 33.1631 13.125 32.5001 13.125H29.3751C28.7121 13.125 28.0762 12.8616 27.6073 12.3928C27.1385 11.9239 26.8751 11.288 26.8751 10.625V7.5C26.8751 6.83696 27.1385 6.20107 27.6073 5.73223C28.0762 5.26339 28.7121 5 29.3751 5ZM29.3751 10.625H32.5001V7.5H29.3751V10.625Z"
+              />
+            </svg>
+
+            <h3 class="pricing-card__tier">Pro</h3>
+
+            <div class="pricing-card__tag">Best Value</div>
+          </div>
+
+          <p class="pricing-card__description">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          </p>
+        </div>
+
+        <p class="pricing-card__pricing-line">
+          <span class="pricing-card__price">$11</span>
+          <span>/ month</span>
+        </p>
+
+        <ul class="pricing-card__features">
+          <li class="pricing-card__feature">
+            <svg
+              class="pricing-card__bullet"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M9.00001 16.17L5.53001 12.7C5.14002 12.31 4.51001 12.31 4.12001 12.7C3.73001 13.09 3.73001 13.72 4.12001 14.11L8.30001 18.29C8.69001 18.68 9.32001 18.68 9.71001 18.29L20.29 7.71C20.68 7.32 20.68 6.69 20.29 6.3C19.9 5.91 19.27 5.91 18.88 6.3L9.00001 16.17Z"
+              />
+            </svg>
+            <span>2 links</span>
+          </li>
+          <li class="pricing-card__feature">
+            <svg
+              class="pricing-card__bullet"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M9.00001 16.17L5.53001 12.7C5.14002 12.31 4.51001 12.31 4.12001 12.7C3.73001 13.09 3.73001 13.72 4.12001 14.11L8.30001 18.29C8.69001 18.68 9.32001 18.68 9.71001 18.29L20.29 7.71C20.68 7.32 20.68 6.69 20.29 6.3C19.9 5.91 19.27 5.91 18.88 6.3L9.00001 16.17Z"
+              />
+            </svg>
+            <span>Own analytics platform</span>
+          </li>
+          <li class="pricing-card__feature">
+            <svg
+              class="pricing-card__bullet"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M9.00001 16.17L5.53001 12.7C5.14002 12.31 4.51001 12.31 4.12001 12.7C3.73001 13.09 3.73001 13.72 4.12001 14.11L8.30001 18.29C8.69001 18.68 9.32001 18.68 9.71001 18.29L20.29 7.71C20.68 7.32 20.68 6.69 20.29 6.3C19.9 5.91 19.27 5.91 18.88 6.3L9.00001 16.17Z"
+              />
+            </svg>
+            <span>Chat support</span>
+          </li>
+          <li
+            class="pricing-card__feature pricing-card__feature--disabled"
+            aria-hidden="true"
+          >
+            <svg
+              class="pricing-card__bullet"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3 5.71C17.91 5.32 17.28 5.32 16.89 5.71L12 10.59L7.10997 5.7C6.71997 5.31 6.08997 5.31 5.69997 5.7C5.30997 6.09 5.30997 6.72 5.69997 7.11L10.59 12L5.69997 16.89C5.30997 17.28 5.30997 17.91 5.69997 18.3C6.08997 18.69 6.71997 18.69 7.10997 18.3L12 13.41L16.89 18.3C17.28 18.69 17.91 18.69 18.3 18.3C18.69 17.91 18.69 17.28 18.3 16.89L13.41 12L18.3 7.11C18.68 6.73 18.68 6.09 18.3 5.71Z"
+              />
+            </svg>
+            <span>Mobile application</span>
+          </li>
+          <li
+            class="pricing-card__feature pricing-card__feature--disabled"
+            aria-hidden="true"
+          >
+            <svg
+              class="pricing-card__bullet"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3 5.71C17.91 5.32 17.28 5.32 16.89 5.71L12 10.59L7.10997 5.7C6.71997 5.31 6.08997 5.31 5.69997 5.7C5.30997 6.09 5.30997 6.72 5.69997 7.11L10.59 12L5.69997 16.89C5.30997 17.28 5.30997 17.91 5.69997 18.3C6.08997 18.69 6.71997 18.69 7.10997 18.3L12 13.41L16.89 18.3C17.28 18.69 17.91 18.69 18.3 18.3C18.69 17.91 18.69 17.28 18.3 16.89L13.41 12L18.3 7.11C18.68 6.73 18.68 6.09 18.3 5.71Z"
+              />
+            </svg>
+            <span>Unlimited users</span>
+          </li>
+        </ul>
+
+        <button class="button pricing-card__action">Get Started</button>
+      </section>
+
+      <!-- Card #3: Enterprise -->
+      <section class="pricing-card pricing-card--primary">
+        <div class="pricing-card__summary">
+          <div class="pricing-card__head">
+            <svg
+              class="icon icon--white"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M28.75 5H11.25C9.59301 5.00198 8.00445 5.6611 6.83277 6.83277C5.6611 8.00445 5.00198 9.59301 5 11.25L5 28.75C5.00198 30.407 5.6611 31.9956 6.83277 33.1672C8.00445 34.3389 9.59301 34.998 11.25 35H28.75C30.407 34.998 31.9956 34.3389 33.1672 33.1672C34.3389 31.9956 34.998 30.407 35 28.75V11.25C34.998 9.59301 34.3389 8.00445 33.1672 6.83277C31.9956 5.6611 30.407 5.00198 28.75 5V5ZM25 18.75H21.25V15H25V18.75ZM27.5 15H32.5V18.75H27.5V15ZM21.25 12.5V7.5H25V12.5H21.25ZM18.75 12.5H15V7.5H18.75V12.5ZM18.75 15V18.75H15V15H18.75ZM12.5 18.75H7.5V15H12.5V18.75ZM7.5 21.25H12.5V25H7.5V21.25ZM15 21.25H18.75V25H15V21.25ZM18.75 27.5V32.5H15V27.5H18.75ZM21.25 27.5H25V32.5H21.25V27.5ZM21.25 25V21.25H25V25H21.25ZM27.5 21.25H32.5V25H27.5V21.25ZM32.5 11.25V12.5H27.5V7.5H28.75C29.7446 7.5 30.6984 7.89509 31.4017 8.59835C32.1049 9.30161 32.5 10.2554 32.5 11.25ZM11.25 7.5H12.5V12.5H7.5V11.25C7.5 10.2554 7.89509 9.30161 8.59835 8.59835C9.30161 7.89509 10.2554 7.5 11.25 7.5ZM7.5 28.75V27.5H12.5V32.5H11.25C10.2554 32.5 9.30161 32.1049 8.59835 31.4017C7.89509 30.6984 7.5 29.7446 7.5 28.75ZM28.75 32.5H27.5V27.5H32.5V28.75C32.5 29.7446 32.1049 30.6984 31.4017 31.4017C30.6984 32.1049 29.7446 32.5 28.75 32.5Z"
+              />
+            </svg>
+
+            <h3 class="pricing-card__tier">Enterprise</h3>
+          </div>
+
+          <p class="pricing-card__description">
+            Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          </p>
+        </div>
+
+        <p class="pricing-card__pricing-line">
+          <span class="pricing-card__price">Let's Talk</span>
+        </p>
+
+        <ul class="pricing-card__features">
+          <li class="pricing-card__feature">
+            <svg
+              class="pricing-card__bullet"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M9.00001 16.17L5.53001 12.7C5.14002 12.31 4.51001 12.31 4.12001 12.7C3.73001 13.09 3.73001 13.72 4.12001 14.11L8.30001 18.29C8.69001 18.68 9.32001 18.68 9.71001 18.29L20.29 7.71C20.68 7.32 20.68 6.69 20.29 6.3C19.9 5.91 19.27 5.91 18.88 6.3L9.00001 16.17Z"
+              />
+            </svg>
+            <span>2 links</span>
+          </li>
+          <li class="pricing-card__feature">
+            <svg
+              class="pricing-card__bullet"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M9.00001 16.17L5.53001 12.7C5.14002 12.31 4.51001 12.31 4.12001 12.7C3.73001 13.09 3.73001 13.72 4.12001 14.11L8.30001 18.29C8.69001 18.68 9.32001 18.68 9.71001 18.29L20.29 7.71C20.68 7.32 20.68 6.69 20.29 6.3C19.9 5.91 19.27 5.91 18.88 6.3L9.00001 16.17Z"
+              />
+            </svg>
+            <span>Own analytics platform</span>
+          </li>
+          <li class="pricing-card__feature">
+            <svg
+              class="pricing-card__bullet"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M9.00001 16.17L5.53001 12.7C5.14002 12.31 4.51001 12.31 4.12001 12.7C3.73001 13.09 3.73001 13.72 4.12001 14.11L8.30001 18.29C8.69001 18.68 9.32001 18.68 9.71001 18.29L20.29 7.71C20.68 7.32 20.68 6.69 20.29 6.3C19.9 5.91 19.27 5.91 18.88 6.3L9.00001 16.17Z"
+              />
+            </svg>
+            <span>Chat support</span>
+          </li>
+          <li class="pricing-card__feature">
+            <svg
+              class="pricing-card__bullet"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M9.00001 16.17L5.53001 12.7C5.14002 12.31 4.51001 12.31 4.12001 12.7C3.73001 13.09 3.73001 13.72 4.12001 14.11L8.30001 18.29C8.69001 18.68 9.32001 18.68 9.71001 18.29L20.29 7.71C20.68 7.32 20.68 6.69 20.29 6.3C19.9 5.91 19.27 5.91 18.88 6.3L9.00001 16.17Z"
+              />
+            </svg>
+            <span>Mobile application</span>
+          </li>
+          <li class="pricing-card__feature">
+            <svg
+              class="pricing-card__bullet"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M9.00001 16.17L5.53001 12.7C5.14002 12.31 4.51001 12.31 4.12001 12.7C3.73001 13.09 3.73001 13.72 4.12001 14.11L8.30001 18.29C8.69001 18.68 9.32001 18.68 9.71001 18.29L20.29 7.71C20.68 7.32 20.68 6.69 20.29 6.3C19.9 5.91 19.27 5.91 18.88 6.3L9.00001 16.17Z"
+              />
+            </svg>
+            <span>Unlimited users</span>
+          </li>
+          <li class="pricing-card__feature">
+            <svg
+              class="pricing-card__bullet"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M9.00001 16.17L5.53001 12.7C5.14002 12.31 4.51001 12.31 4.12001 12.7C3.73001 13.09 3.73001 13.72 4.12001 14.11L8.30001 18.29C8.69001 18.68 9.32001 18.68 9.71001 18.29L20.29 7.71C20.68 7.32 20.68 6.69 20.29 6.3C19.9 5.91 19.27 5.91 18.88 6.3L9.00001 16.17Z"
+              />
+            </svg>
+            <span>Customize Panel</span>
+          </li>
+        </ul>
+
+        <button class="button button--light pricing-card__action">
+          Get Started
+        </button>
+      </section>
+    </section>
+  </article>
+</div>
+
+<!-- Pricing section ends here -->
+<!-- Pricing section ends here -->
+
+<!-- NEWSLETTER SECTION STARTS HERE -->
+<!-- NEWSLETTER SECTION STARTS HERE -->
+<section class="news-letter" id="News-letter">
+  <div class="news">
+    <div class="container">
+      <h1 class="news-heading">Subscribe To Our Newsletter</h1>
+      <p class="des how-de">
+        Get the Latest news about camping and tours directly in your inbox, drop
+        your
+        <br />
+        email below to get update about us
+      </p>
+
+      <form action="">
+        <input
+          type="email"
+          maxlength="50"
+          required
+          placeholder="Enter your email address"
+        />
+        <button class="bt">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER SECTION ENDS HERE -->
+<!-- NEWSLETTER SECTION ENDS HERE -->
+
 <%- include ('partials/landingFooter') %>
-
-

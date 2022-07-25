@@ -20,6 +20,9 @@
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="/stylesheet/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <!-- Custom links -->
+    <link rel="stylesheet" href="/stylesheet/pricing.css" />
     <link rel="stylesheet" href="/stylesheet/user-auth.css">
     
     <title class="toggle" >CampWe</title>
@@ -34,11 +37,12 @@
             <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
                <ul class="navbar-nav ml-auto">
                   <li class="nav-item active"><a class="nav-link" href="/campgrounds">Campgrounds </span></a> </li>
+                  <li class="nav-item"><a class="nav-link" href="#">Pricing</a> </li>
                   <li class="nav-item"><a class="nav-link" href="#">About</a> </li>
                   <li class="nav-item"><a class="nav-link" href="#">Services</a> </li>
                   <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
                   <%if(!currentUser){%>
-                    <li><a href="/login" class="btn btn-outline-dark login" >Login</a></li>
+                    <li><a href="#" class="btn btn-outline-dark login" >Get Started</a></li>
                   <%} else{%>                   
 
                     <li class="nav-item dropdown"> 
