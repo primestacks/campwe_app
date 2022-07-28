@@ -117,8 +117,8 @@ button {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 22.5rem;
-  min-height: 43rem;
+  max-width: 21rem;
+  /* min-height: 43rem; */
   border-radius: var(--rounded-lg);
   padding: 2rem 1.5rem;
   color: var(--c-dim-color);
@@ -188,7 +188,7 @@ button {
 .pricing-card__features {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.3rem;
   margin: 0;
   padding: 0;
   list-style: none;

@@ -1,35 +1,127 @@
-<%- include ('./partials/header') %>
-<div class="container"> 
-    <div class="inner-form-wrapper">
-        <form action="/register" method="POST" class="form">
-            <div><h1>Sign Up</h1></div>
-            <div class="login-form">
-                <div class="form-items">
-                   <label for="username">Username: </label>
-                    <input type="text" name="username" >
-                </div>
-                <div class="form-items">
-                    <label for="username">Email: </label>
-                     <input type="text" name="email">
-                 </div>
-                <div class="form-items">
-                    <label for="password">Password: </label>
-                    <input type="password" name="password" >
-                </div>
-                <div class="form-items">
-                    <label for="ConfirmPass">Confirm Password: </label>
-                    <input type="password" name="ConfirmPass">
-                </div>
-                <div class="form-items">
-                    <button>Register</button>
-                </div>
-                <div class="form-items">
-                    <p> <a href="#">Forgotten password?</a></p>
-                    <p>Already have an account? <a href="/login">Login</a></p>
-                </div>
-            </div>
-        </form>
-    </div>
+<%- include ('./partials/auth-header')%>
+
+<div class="container">
+	<div class="row py-5 mt-4 align-items-center">
+		<div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
+			<img
+				src="https://bootstrapious.com/i/snippets/sn-registeration/illustration.svg"
+				alt=""
+				class="img-fluid mb-3 d-none d-md-block"
+			/>
+			<h1>Create an Account</h1>
+			<p class="font-italic text-muted mb-0">
+				Create a minimal registeration page using Bootstrap 4 HTML form
+				elements.
+			</p>
+		</div>
+
+		<!-- Registeration Form -->
+		<div class="col-md-7 col-lg-5 ml-auto">
+			<form action="/register" method="post">
+
+					<div class="row">
+					<!-- Social Login -->
+					<div class="form-group col-lg-12 mx-auto">
+						<a href="#" class="btn btn-primary btn-block py-2 btn-google">
+							<i class="fa-brands fa-google"></i>
+							<span class="font-weight-bold">Continue with Google</span>
+						</a>
+					</div> 
+
+					<!-- Divider Text -->
+					<div
+						class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
+						<div class="border-bottom w-100 ml-5"></div>
+						<span
+							class="px-2 small text-muted font-weight-bold text-muted"
+							>OR</span
+						>
+						<div class="border-bottom w-100 mr-5"></div>
+					</div>
+
+					<!-- First Name -->
+					<div class="input-group col-lg-6 mb-4">
+						<div class="input-group-prepend">
+							<span
+								class="input-group-text bg-white px-4 border-md border-right-0">
+								<i class="fa fa-user text-muted"></i>
+							</span>
+						</div>
+						<input id="firstName" type="text" name="firstname" placeholder="First Name"
+							class="form-control bg-white border-left-0 border-md"/>
+					</div>
+
+					<!-- Last Name -->
+					<div class="input-group col-lg-6 mb-4">
+						<div class="input-group-prepend">
+							<span
+								class="input-group-text bg-white px-4 border-md border-right-0">
+								<i class="fa fa-user text-muted"></i>
+							</span>
+						</div>
+						<input id="lastName" type="text" name="lastname" placeholder="Last Name"
+							class="form-control bg-white border-left-0 border-md" />
+					</div>
+
+					<!-- Email Address -->
+					<div class="input-group col-lg-12 mb-4">
+						<div class="input-group-prepend">
+							<span
+								class="input-group-text bg-white px-4 border-md border-right-0">
+								<i class="fa fa-envelope text-muted"></i>
+							</span>
+						</div>
+						<input id="username" type="text" name="username" placeholder="username"
+							class="form-control bg-white border-left-0 border-md" />
+					</div>
+
+					<!-- Password -->
+					<div class="input-group col-lg-6 mb-4">
+						<div class="input-group-prepend">
+							<span
+								class="input-group-text bg-white px-4 border-md border-right-0"
+							>
+								<i class="fa fa-lock text-muted"></i>
+							</span>
+						</div>
+						<input id="password" type="password" name="password" placeholder="Password"
+							class="form-control bg-white border-left-0 border-md" />
+					</div>
+
+					<!-- Password Confirmation -->
+					<div class="input-group col-lg-6 mb-4">
+						<div class="input-group-prepend">
+							<span
+								class="input-group-text bg-white px-4 border-md border-right-0"
+							>
+								<i class="fa fa-lock text-muted"></i>
+							</span>
+						</div>
+						<input
+							id="passwordConfirmation"
+							type="text"
+							name="passwordConfirmation"
+							placeholder="Confirm Password"
+							class="form-control bg-white border-left-0 border-md"
+						/>
+					</div>
+
+					<!-- Submit Button -->
+					<button type="submit" class="form-group col-lg-12 mx-auto mb-0">
+						<span class="font-weight-bold">Create your account</span>
+					</button>
+
+					<!-- Already Registered -->
+					<div class="text-center w-100">
+						<p class="text-muted font-weight-bold">
+							Already Registered?
+							<a href="/login" class="text-primary ml-2">Login</a>
+						</p>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
 </div>
 
 <%- include ('./partials/footer') %>
