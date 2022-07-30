@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const request = require('request');
 const bodyParser = require('body-parser');
-const port = process.env.PORT || 5000;
+const port = process.env.PORT;
 const mongoose = require('mongoose');
 const requireStack = require('require-stack');
 const methodOverride = require('method-override');
@@ -98,6 +98,10 @@ app.use('/campgrounds/:id/comments', commentRoutes);
 // SEED DATABASE
 // seedDB();
 
+if (port == null || port == "") {
+  port = 5000;
+}
+
 app.listen(port, function (req, res) {
-	console.log(`CampWe server has started at Port ${port}`);
+	console.log(`CampWe server has started at Port ${port} successfully`);
 });
