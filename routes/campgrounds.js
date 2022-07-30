@@ -47,7 +47,7 @@ router.post('/', isLoggedIn, function (req, res) {
   };
   // Create a new campgroud and save to database
   // req.body.campground.description = req.sanitize(req.body.campground.description);
-  Campground.create(newCampgrounds, function (err, newlyCreatedcampground) {
+  Campground.create(newCampgrounds, (err, newlyCreatedcampground) => {
     if (err) {
       res.render('new');
       console.log(err);
@@ -59,7 +59,7 @@ router.post('/', isLoggedIn, function (req, res) {
   });
 });
 
-router.get('/new', isLoggedIn, function (req, res) {
+router.get('/new', isLoggedIn, (req, res) => {
   // create a new campground
   res.render('campgrounds/new');
 });

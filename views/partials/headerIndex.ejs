@@ -38,9 +38,8 @@
                <ul class="navbar-nav ml-auto">
                   <li class="nav-item active"><a class="nav-link" href="/campgrounds">Campgrounds </span></a> </li>
                   <li class="nav-item"><a class="nav-link" href="#">Pricing</a> </li>
-                  <li class="nav-item"><a class="nav-link" href="#">About</a> </li>
                   <li class="nav-item"><a class="nav-link" href="#">Services</a> </li>
-                  <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Blog</a> </li>
                   <%if(!currentUser){%>
                     <li><a href="#" class="btn btn-outline-dark login" >Get Started</a></li>
                   <%} else{%>                   
@@ -48,7 +47,10 @@
                     <li class="nav-item dropdown"> 
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user-circle-o"></i><%=currentUser.username%> </a>
                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <p class="dropdown-item user-li" href="#"><strong><%-currentUser.username%></strong></p>
+                            <p class="dropdown-item user-li" href="#">
+                              <strong><%-currentUser.firstname%></strong>
+                              <strong><%-currentUser.lastname%></strong>
+                            </p>
                             <hr>
                             <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
                             <a class="dropdown-item" href="#"> <i class="fa fa-gear"></i> Settings</a>

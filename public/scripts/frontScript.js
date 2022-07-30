@@ -29,8 +29,7 @@ clearButton.addEventListener('click', function () {
 // }
 
 // User auth Form and button
-// For Demo Purpose [Changing input group text on focus]
-// For Demo Purpose [Changing input group text on focus]
+
 $(function () {
 	$('input, select').on('focus', function () {
 		$(this).parent().find('.input-group-text').css('border-color', '#54077a');
@@ -39,4 +38,13 @@ $(function () {
 		$(this).parent().find('.input-group-text').css('border-color', '#ced4da');
 	});
 });
+
+  // script for Typed Js animation on the landing page 
+  var typed = new Typed(".mov",{
+    strings: [,  "Ganesh","Content Writer","Web Developer"] ,
+    typeSpeed: 100,
+    backSpeed: 100,
+    loop: true
+
+})
 
