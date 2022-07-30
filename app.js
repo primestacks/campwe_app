@@ -1,9 +1,9 @@
-// require('dotenv').config()
+require('dotenv').config()
 const express = require('express');
 const app = express();
 const request = require('request');
 const bodyParser = require('body-parser');
-const port = process.env.PORT;
+let port = process.env.PORT;
 const mongoose = require('mongoose');
 const requireStack = require('require-stack');
 const methodOverride = require('method-override');
@@ -27,7 +27,19 @@ let indexRoutes = require('./routes/index');
 // Mongo DB Configoration 
 // New connection string
 // mongodb+srv://admin-campe:<password>@cluster0.lqidu.mongodb.net/?retryWrites=true&w=majority
-mongoose.connect('mongodb+srv://admin-campe:Text-12345@cluster0.lqidu.mongodb.net/campwe-db', {
+
+// mongoose.connect(MONGO_DB_URL, {
+// 	useNewUrlParser: true,
+// 	useUnifiedTopology: true,
+// 	useCreateIndex: true,
+// 	useFindAndModify: false,
+// 	autoIndex: true,
+// });
+
+
+// Local connection string
+
+mongoose.connect(process.env.LOCALHOSTURL, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 	useCreateIndex: true,
@@ -35,14 +47,7 @@ mongoose.connect('mongodb+srv://admin-campe:Text-12345@cluster0.lqidu.mongodb.ne
 	autoIndex: true,
 });
 
-// Local connection string
-// mongoose.connect('mongodb://localhost:27017/campwe-db', {
-// 	useNewUrlParser: true,
-// 	useUnifiedTopology: true,
-// 	useCreateIndex: true,
-// 	useFindAndModify: false,
-// 	autoIndex: true,
-// });
+console.log(process.env.LOCALHOSTURL)
 mongoose.set('useFindAndModify', false);
 
 	//   Passport session setup
