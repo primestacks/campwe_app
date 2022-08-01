@@ -28,24 +28,24 @@ let indexRoutes = require('./routes/index');
 // New connection string
 // mongodb+srv://admin-campe:<password>@cluster0.lqidu.mongodb.net/?retryWrites=true&w=majority
 
-// mongoose.connect(MONGO_DB_URL, {
-// 	useNewUrlParser: true,
-// 	useUnifiedTopology: true,
-// 	useCreateIndex: true,
-// 	useFindAndModify: false,
-// 	autoIndex: true,
-// });
-
-
-// Local connection string
-
-mongoose.connect(process.env.LOCALHOSTURL, {
+mongoose.connect(process.env.NEW_DB_URL, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 	useCreateIndex: true,
 	useFindAndModify: false,
 	autoIndex: true,
 });
+
+
+// Local connection string
+
+// mongoose.connect(process.env.LOCALHOSTURL, {
+// 	useNewUrlParser: true,
+// 	useUnifiedTopology: true,
+// 	useCreateIndex: true,
+// 	useFindAndModify: false,
+// 	autoIndex: true,
+// });
 
 console.log(process.env.LOCALHOSTURL)
 mongoose.set('useFindAndModify', false);
