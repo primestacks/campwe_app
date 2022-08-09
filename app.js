@@ -3,7 +3,6 @@ const express = require('express');
 const app = express();
 const request = require('request');
 const bodyParser = require('body-parser');
-let port = process.env.PORT;
 const mongoose = require('mongoose');
 const requireStack = require('require-stack');
 const methodOverride = require('method-override');
@@ -102,7 +101,7 @@ app.use('/campgrounds/:id/comments', commentRoutes);
 
 // SEED DATABASE
 // seedDB();
-
+let port = process.env.PORT;
 if (port == null || port == "") {
   port = 5000;
 }
