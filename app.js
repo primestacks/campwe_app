@@ -26,8 +26,8 @@ let indexRoutes = require('./routes/index');
 // Mongo DB Configoration 
 // New connection string
 // mongodb+srv://admin-campe:<password>@cluster0.lqidu.mongodb.net/?retryWrites=true&w=majority
-
-mongoose.connect(process.env.NEW_DB_URL, {
+const url = process.env.NEW_DB_URL;
+mongoose.connect(url, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 	useCreateIndex: true,
